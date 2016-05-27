@@ -1,7 +1,7 @@
 ---
 title       : Activity Monitoring Data
 subtitle    : Reproducible Research:Peer Assessment 1
-author      : MCVillanueva, August 2015 
+author      : MVillanueva, May 2016 
 course      : Data Science Specialization, COURSERA 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -129,6 +129,13 @@ We use the ggplot library to create the histogram.
 
 ```r
 library(ggplot2)
+```
+
+```
+## Use suppressPackageStartupMessages to eliminate package startup messages.
+```
+
+```r
 ggplot(data=Total, aes(x=Total$TotalSteps), na.rm=TRUE) +
   geom_histogram(col="red",fill="green",binwidth=2000) + 
   labs(title="Total Number of Steps Taken Per Day") +
