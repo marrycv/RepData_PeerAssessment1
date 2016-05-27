@@ -1,7 +1,7 @@
 ---
 title       : Activity Monitoring Data
 subtitle    : Reproducible Research:Peer Assessment 1
-author      : MCVillanueva, August 2015 
+author      : MCVillanueva, May 2016 
 course      : Data Science Specialization, COURSERA 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
