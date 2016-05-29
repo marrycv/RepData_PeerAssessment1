@@ -296,15 +296,10 @@ str(Total)               # have a look at the aggregated data
 ##  $ TotalSteps: int  0 126 11352 12116 13294 15420 11015 0 12811 9900 ...
 </code></pre>
 
-<p>We use the ggplot library to create the histogram. </p>
+<p>We use the ggplot library to create the histogram.  </p>
 
 <pre><code class="r">library(ggplot2)
-</code></pre>
-
-<pre><code>## Use suppressPackageStartupMessages to eliminate package startup messages.
-</code></pre>
-
-<pre><code class="r">ggplot(data=Total, aes(x=Total$TotalSteps), na.rm=TRUE) +
+ggplot(data=Total, aes(x=Total$TotalSteps), na.rm=TRUE) +
   geom_histogram(col=&quot;red&quot;,fill=&quot;green&quot;,binwidth=2000) + 
   labs(title=&quot;Total Number of Steps Taken Per Day&quot;) +
   labs(x = &quot;Total Steps&quot;, y=&quot;Count&quot;)
@@ -386,7 +381,13 @@ peak
 <pre><code>## [1] 835
 </code></pre>
 
-<p>The peak is at 835 interval, in which we could imply that since the person is active mostly at this given interval, the person has a daily routine that requires him/her to take this number of steps. </p>
+<pre><code class="r">max(Average$AverageStep)
+</code></pre>
+
+<pre><code>## [1] 206.1698
+</code></pre>
+
+<p>The peak starts at 835 interval, in which we could imply that since the person is active mostly at this given interval, the person has a daily routine that requires him/her to take this number of steps. </p>
 
 <h2>Imputing missing values</h2>
 

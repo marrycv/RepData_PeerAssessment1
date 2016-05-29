@@ -1,5 +1,5 @@
 ---
-title       : Activity Monitoring Data
+title       : Daily Steps Activity Monitoring Data
 subtitle    : Reproducible Research:Peer Assessment 1
 author      : MVillanueva, May 2016 
 course      : Data Science Specialization, COURSERA 
@@ -76,7 +76,7 @@ TotalSteps<-Total$TotalSteps
 str(Total)               # have a look at the aggregated data
 ```
 
-We use the ggplot library to create the histogram. 
+We use the ggplot library to create the histogram.  
 
 ```{r histogram 1,echo=TRUE}
 library(ggplot2)
@@ -122,8 +122,9 @@ library(ggplot2)
 library(scales)
 peak<-Average$FiveMinuteInterval[which.max(Average$AverageStep)]
 peak
+max(Average$AverageStep)
 ```
-The peak is at 835 interval, in which we could imply that since the person is active mostly at this given interval, the person has a daily routine that requires him/her to take this number of steps. 
+The peak starts at 835 interval, in which we could imply that since the person is active mostly at this given interval, the person has a daily routine that requires him/her to take this number of steps. 
 
 ## Imputing missing values
 Recall that we ignore the missing values in our analysis so far. But missing values could be a problem and could introduce bias. We will try to find out the proportion of missing values in our data set. Note that the missing value entries all appear in the Step variable.
